@@ -88,20 +88,6 @@ For each iteration:
 
 This helps evaluate how consistent the model's cross-domain performance is across multiple runs.
 
-## Repository Structure
-
-```
-project/
-│
-├── spam_classifier.py
-├── datasets/
-│   ├── SMSSpamCollection.txt
-│   └── email_corpus_lingspam.txt
-│
-├── output.txt
-└── README.md
-```
-
 ## Output
 
 The file:
