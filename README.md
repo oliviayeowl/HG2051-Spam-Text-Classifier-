@@ -7,6 +7,7 @@ This project implements a **Naive Bayes spam classifier** designed to evaluate t
 
 In addition to traditional bag-of-words approaches, the classifier incorporates a **custom set of linguistically motivated features** extracted from each message. The project therefore explores both **feature engineering and cross-domain transferability** in spam classification.
 
+
 ## Project Objective
 
 The primary goal of this project is to investigate:
@@ -15,6 +16,7 @@ The primary goal of this project is to investigate:
 • whether linguistically motivated features improve classification performance
 • the robustness of the model across repeated training and evaluation cycles
 
+
 ## Main Script
 
 ### `spam_classifier.py`
@@ -22,6 +24,7 @@ The primary goal of this project is to investigate:
 This is the primary script responsible for loading datasets, preprocessing text, extracting features, training the classifier, and evaluating performance.
 
 The script performs the following steps:
+
 
 ### 1. Data Loading
 
@@ -35,6 +38,7 @@ The script loads two datasets:
 
 The SMS dataset is used for training and testing, while the email dataset is used to evaluate cross-domain generalisation.
 
+
 ### 2. Preprocessing
 
 Text data undergoes several preprocessing steps:
@@ -45,6 +49,7 @@ Text data undergoes several preprocessing steps:
 • construction of the top **100 most frequent ham and spam words**
 
 These preprocessing steps are designed to reduce noise and focus on features that are more predictive of spam content.
+
 
 ### 3. Feature Engineering
 
@@ -58,6 +63,7 @@ extracts **five linguistically motivated features**.
 
 These features are then applied to both the SMS and email datasets to generate the input vectors used for classification.
 
+
 ### 4. Model Training
 
 The model uses a **Naive Bayes classifier**.
@@ -67,6 +73,7 @@ Training procedure:
 • 80% of the SMS dataset is used for training
 • 20% is reserved as a test set
 
+
 ### 5. Evaluation
 
 Model performance is evaluated on two datasets:
@@ -75,6 +82,7 @@ Model performance is evaluated on two datasets:
 • the **full email dataset** (cross-domain evaluation)
 
 This allows comparison between **within-domain performance and cross-domain transferability**.
+
 
 ### 6. Robustness Testing
 
@@ -88,19 +96,6 @@ For each iteration:
 
 This helps evaluate how consistent the model's cross-domain performance is across multiple runs.
 
-## Repository Structure
-
-```
-project/
-│
-├── spam_classifier.py
-├── datasets/
-│   ├── SMSSpamCollection.txt
-│   └── email_corpus_lingspam.txt
-│
-├── output.txt
-└── README.md
-```
 
 ## Output
 
