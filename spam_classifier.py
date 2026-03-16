@@ -42,7 +42,7 @@ from tqdm import tqdm
 
 # Now let's take a look at the corpus we will use to test the classifier
 # sms = pd.read_table('datasets/SMSSpamCollection_500.txt', header=None, encoding='utf-8') # use this for testing/illustration because it is smaller
-sms = pd.read_table('datasets/SMSSpamCollection.txt', header=None, encoding='utf-8') # use this for the final version of the project
+sms = pd.read_table("Spam_Text_Classifier/datasets/SMSSpamCollection.txt", header=None, encoding='utf-8') # use this for the final version of the project
 print(sms.head()) # print the firse 5 lines of the dataframe
 print(sms.info()) # print general info about the dataframe
 print(sms[0].value_counts()) # print the labels located in the first column of the dataframe
@@ -259,7 +259,7 @@ print("Accuracy of classifier:", nltk.classify.accuracy(classifier, features[tra
 # processed into the same format as our SMS data.
 
 # First we load the data and print some info on it
-emails = pd.read_table('datasets/email_corpus_lingspam.txt', header=None, encoding='utf-8')
+emails = pd.read_table('Spam_Text_Classifier/datasets/email_corpus_lingspam.txt', header=None, encoding='utf-8')
 print(emails.head())
 print(emails.info())
 print(emails[0].value_counts())
@@ -291,7 +291,7 @@ print("Accuracy of classifier on email data:", nltk.classify.accuracy(classifier
 
 # The code below runs 10 iterations of the classifier and writes each score to
 # a text file, along with a final average score (mean) across all 10 iterations.
-with open('output.txt', 'w') as f:
+with open('outputresults.txt', 'w') as f:
     iterations = []
     for x in list(range(10)):
         print(x)
