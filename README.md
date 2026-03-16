@@ -1,4 +1,3 @@
-
 # Spam Classification with Cross-Domain Evaluation
 
 ## Overview
@@ -13,7 +12,9 @@ In addition to traditional bag-of-words approaches, the classifier incorporates 
 The primary goal of this project is to investigate:
 
 • how well a spam classifier trained on SMS messages performs when applied to email data
+
 • whether linguistically motivated features improve classification performance
+
 • the robustness of the model across repeated training and evaluation cycles
 
 
@@ -39,6 +40,7 @@ The script loads two datasets:
 The SMS dataset is used for training and testing, while the email dataset is used to evaluate cross-domain generalisation.
 
 
+
 ### 2. Preprocessing
 
 Text data undergoes several preprocessing steps:
@@ -49,6 +51,7 @@ Text data undergoes several preprocessing steps:
 • construction of the top **100 most frequent ham and spam words**
 
 These preprocessing steps are designed to reduce noise and focus on features that are more predictive of spam content.
+
 
 
 ### 3. Feature Engineering
@@ -64,6 +67,7 @@ extracts **five linguistically motivated features**.
 These features are then applied to both the SMS and email datasets to generate the input vectors used for classification.
 
 
+
 ### 4. Model Training
 
 The model uses a **Naive Bayes classifier**.
@@ -74,6 +78,7 @@ Training procedure:
 • 20% is reserved as a test set
 
 
+
 ### 5. Evaluation
 
 Model performance is evaluated on two datasets:
@@ -82,6 +87,7 @@ Model performance is evaluated on two datasets:
 • the **full email dataset** (cross-domain evaluation)
 
 This allows comparison between **within-domain performance and cross-domain transferability**.
+
 
 
 ### 6. Robustness Testing
@@ -96,6 +102,11 @@ For each iteration:
 
 This helps evaluate how consistent the model's cross-domain performance is across multiple runs.
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e3cb466c48c0ac0341154d5d0d9e2a273f86dbe8
 ## Output
 
 The file:
